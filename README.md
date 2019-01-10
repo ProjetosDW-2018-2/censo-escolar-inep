@@ -31,6 +31,21 @@ $ conda install -c anaconda pandas
 ```
 $ conda install -c conda-forge folium
 ```
+* 1.2.1) Alguns dados usados no processo de geração dos mapas de calor são muito grandes, por isso deixamos eles disponíveis no drive abaixo. Basta baixá-los e colocar todos, sem alterar nenhuma informação, na past "plot" do repositório.
+
+- [x] [arquivos](https://drive.google.com/open?id=1fUoPaMbR2p52E1ipEZza8P_d7xvThuzB)
+
+* 1.3) Agora com os pacotes instalados e os arquivos baixados é necessário iniciar o Jupyter. No terminal - ou cmd - digite o comando:
+
+```
+$ jupyter-notebook
+```
+
+* 1.4) Após o serviço do Jupyter ser iniciado navegue através do mesmo até a pasta "plot" dentro do local onde o repositório repositório foi baixado.
+
+* 1.4.1) Dentro desta pasta consta o notebook "escolacenso_heat_map.ipynb", somente clicando nele através do Jupyter ele será iniciado.
+
+* 1.4.2) Dentro do notebook existem blocos que chamamos de células. É necesśario executar cada célula na ordem já definida dentro do notebook para evitar erros. Cada célula possui comentários que explicam o que cada bloco está fazendo para construir os mapas de calor.
 
 ### Consultas e resultados
 
