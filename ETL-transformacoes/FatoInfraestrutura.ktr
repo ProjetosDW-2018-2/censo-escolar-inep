@@ -588,16 +588,62 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Select values</from>
+      <to>Calculator</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Calculator</from>
+      <to>Memory Group by</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Memory Group by</from>
       <to>Fato_Infraestrutura</to>
       <enabled>Y</enabled>
     </hop>
-    <hop>
-      <from>Select values</from>
-      <to>Memory Group by</to>
-      <enabled>Y</enabled>
-    </hop>
   </order>
+  <step>
+    <name>Calculator</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <failIfNoFile>N</failIfNoFile>
+    <calculation>
+      <field_name>PORCENTAGEM_ESCOLAS</field_name>
+      <calc_type>PERCENT_1</calc_type>
+      <field_a>QTD_ESCOLAS</field_a>
+      <field_b>QTD_ESCOLAS_TOTAL</field_b>
+      <field_c/>
+      <value_type>None</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>DimAcessiblidade</name>
     <type>DBLookup</type>
@@ -1001,6 +1047,10 @@
         <column_name>QTD_ESCOLAS</column_name>
         <stream_name>ESCOLAS</stream_name>
       </field>
+      <field>
+        <column_name>PORCENTAGEM_ESCOLAS</column_name>
+        <stream_name>PORCENTAGEM</stream_name>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1012,7 +1062,7 @@
     </remotesteps>
     <GUI>
       <xloc>112</xloc>
-      <yloc>368</yloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1058,6 +1108,12 @@
         <type>SUM</type>
         <valuefield/>
       </field>
+      <field>
+        <aggregate>PORCENTAGEM</aggregate>
+        <subject>PORCENTAGEM_ESCOLAS</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1068,8 +1124,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>288</xloc>
-      <yloc>368</yloc>
+      <xloc>112</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1183,7 +1239,7 @@ ORDER BY REGIAO, ESTADO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>352</xloc>
+      <xloc>288</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
