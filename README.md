@@ -118,7 +118,7 @@ pentaho-server/pentaho-solutions/system/
 
 Através da análise dos cubos no Pentaho BI podemos responder a várias perguntas de maneira gráfica.
 
-* Qual a quantidade de alunos por necessidade especial divididos entre as zonas rural e urbana nas escolas estaduais, municipais, federais e privadas?
+* Qual a quantidade de alunos por tipo de deficiência, divididos entre as zonas rural e urbana nas escolas estaduais, municipais, federais e privadas?
 
   <img src="OLAP-consultas/alunos_qtd_ne_zona_dependencia_img.png" >
   
@@ -137,12 +137,24 @@ Através da análise dos cubos no Pentaho BI podemos responder a várias pergunt
 * Qual a quantidade de escolas nos estados das regiões norte e sul que possuem banheiro adptado, sala de atendimento especial e outras depedências referentes à acessibilidade?
 
   <img src="OLAP-consultas/escolas_qtd_estado_regiao_pne_img.png" >
-  
-E como usamos os mapas de calor anteriormente podemos identificar também a distribuição dos alunos e escolas, comparando as duas regiões, norte e sul. Durante esse processo encontramos algumas inconsistencias nos daods: alunos matriculados em escolas do norte do país com endereço em regiões diferentes.
+
+* Como fica a distribuição das escolas sem acesso a internert?
+
+<img src="imagens/escolas_sem_internet.png" >
+
+* A distribuição fica muito parecida no caso das escolas que tem internet?
+
+<img src="imagens/escolas_com_internet.png" >
+
+* Como fica a distribuição dos alunos que são pessoas com deficiência e estudam em escolas rurais?
+
+<img src="imagens/alunos_rurais.png" >
+
+Como usamos os mapas de calor anteriormente podemos identificar também a distribuição dos alunos e escolas. Durante o processo da análise de dados encontramos algumas inconsistências: alunos matriculados em escolas do norte do país com endereço em regiões diferentes.
 
   <img src="imagens/alunos_norte_sul_heatmap - dados misturados.png" >
   
-Podemos entender esse problema da seguinte maneira: alunos que se mudam não tem seus dados atualizados na base, já que o censo é realizado de maneira anual,podendo ocorrer problemas como este. Após uma limpeza nos dados nós temos o seguinte mapa para a distribuição dos alunos:
+Podemos entender esse problema da seguinte maneira: alunos que se mudam não tem seus dados atualizados na base, já que o censo é realizado de maneira anual,podendo ocorrer problemas como este. Após uma limpeza nos dados nós temos o seguinte mapa para a distribuição dos alunos, por localização:
 
   <img src="imagens/alunos_norte_sul_heatmap.png" >
   
